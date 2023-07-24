@@ -1,9 +1,15 @@
 pipeline {
     agent any
+
     stages {
-        stage('Clone') {
+
+        stage('Git Checkout') {
+
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/hoanDK0110/golang-web.git'
+                script {
+                    git branch: 'main', url: 'https://github.com/hoanDK0110/golang-web.git'
+                }
+                
             }
         }
     }

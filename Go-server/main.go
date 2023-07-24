@@ -38,8 +38,8 @@ func addUser(c *fiber.Ctx) error {
 func main() {
 	app := fiber.New()
 
-	app.Get("/users", getUsers)
-	app.Post("/users/add", addUser)
+	app.Get("/api/users", getUsers)
+	app.Post("/api/users/add", addUser)
 
 	app.Listen(":8080")
 }
